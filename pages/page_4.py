@@ -234,14 +234,7 @@ with tab1:
 with tab2:
     st.write("bohuzial streamlit io nevie tento content nacitat , pre viac info pozrite moj github")
     st.write("https://github.com/sorujko/Bc")
-    import os, sys
-
-    @st.experimental_singleton
-    def installff():
-        os.system('sbase install geckodriver')
-        os.system('ln -s /home/appuser/venv/lib/python3.9/site-packages/seleniumbase/drivers/geckodriver /home/appuser/venv/bin/geckodriver')
-
-    _ = installff()
+    
     import pandas as pd
     from selenium import webdriver
     from selenium.webdriver.common.by import By
@@ -254,7 +247,7 @@ with tab2:
     options.add_argument("--headless")
     
     # Start a Microsoft Edge webdriver in headless mode
-    driver = webdriver.Chrome(executable_path="chromedriver.exe",options=options)
+    driver = webdriver.Chrome(options=options)
     # Navigate to the specified webpage
     driver.get("https://mapa.covid.chat/")
     try:
