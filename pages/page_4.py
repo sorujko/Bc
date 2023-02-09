@@ -286,7 +286,7 @@ with tab2:
     import matplotlib.pyplot as plt
     import pandas as pd
     import numpy as np
-    st.write("Ak sa nezobrazí modrá mapa/nie su na nej cisla , dajte prosim Rerun , aj viackrat , ano funguje to xD")
+ 
     # Load your GeoDataFrame
     okresy = pd.read_csv('covid_data2.csv')
     okresy.fillna(0, inplace=True)
