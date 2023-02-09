@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
-df=pd.read_csv('new_population.csv')
+df=pd.read_csv('data/new_population.csv')
 df2 = df.copy()
 st.write("### Filtrujte dataset ")
 
