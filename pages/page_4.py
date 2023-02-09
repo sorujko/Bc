@@ -247,7 +247,7 @@ with tab2:
     options.add_argument("--headless")
     
     # Start a Microsoft Edge webdriver in headless mode
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(executable_path="chromedriver.exe",options=options)
     # Navigate to the specified webpage
     driver.get("https://mapa.covid.chat/")
     try:
