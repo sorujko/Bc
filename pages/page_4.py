@@ -232,8 +232,7 @@ with tab1:
         st.write("""##### Pre dnesnok este nenahodili udaje pre Ag testy , skuste skorsi datum""")
 
 with tab2:
-    st.write("bohuzial streamlit io nevie tento content nacitat , pre viac info pozrite moj github")
-    st.write("https://github.com/sorujko/Bc")
+    st.write("Ak sa kontent nezobrazi , alebo na modrej mape nevidite cisla , dajte prosim Rerun")
     
     import pandas as pd
     from selenium import webdriver
