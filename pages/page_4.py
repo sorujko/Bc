@@ -277,7 +277,7 @@ with tab2:
     # Create a pandas dataframe from the data
     df = pd.DataFrame(data, columns=['okres', 'pocet', 'nove_pripady'])
     df.sort_values(by=['okres'] , inplace=True)
-    df.to_csv("covid_data2.csv", index=False, encoding='UTF-8-sig')
+    df.to_csv("data/covid_data2.csv", index=False, encoding='UTF-8-sig')
 
 
     # Close the webdriver
@@ -288,11 +288,11 @@ with tab2:
     import numpy as np
  
     # Load your GeoDataFrame
-    okresy = pd.read_csv('covid_data2.csv')
+    okresy = pd.read_csv('data/covid_data2.csv')
     okresy.fillna(0, inplace=True)
     okresy['nove_pripady'] = okresy['nove_pripady'].astype(np.int64)
 
-    gdf = gpd.read_file('districts.shp', encoding = 'utf8')
+    gdf = gpd.read_file('data/districts.shp', encoding = 'utf8')
     gdf = gpd.GeoDataFrame(gdf, geometry='geometry')
     gdf.crs = 'epsg:4326'
     # Plot the GeoDataFrame
@@ -305,7 +305,7 @@ with tab2:
     # Show the plot
     fig= ax.get_figure()
     st.pyplot(fig)
-    st.image('okresy.png')
+    st.image('images/okresy.png')
     
 
 
