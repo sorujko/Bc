@@ -234,6 +234,13 @@ with tab1:
 with tab2:
     st.write("bohuzial streamlit io nevie tento content nacitat , pre viac info pozrite moj github")
     st.write("https://github.com/sorujko/Bc")
+    import os, sys
+
+    @st.experimental_singleton
+    def installff():
+        os.system('sbase install geckodriver')
+
+    _ = installff()
     import pandas as pd
     from selenium import webdriver
     from selenium.webdriver.common.by import By
@@ -241,8 +248,7 @@ with tab2:
     from selenium.webdriver.support import expected_conditions as EC
     #from selenium.webdriver.chrome.options import Options
     import numpy as np
-
-
+   
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     
