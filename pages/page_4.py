@@ -236,14 +236,14 @@ with tab2:
     from selenium import webdriver
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
+   from selenium.webdriver.chrome.options import Options
     import numpy as np
 
 
-    options = webdriver.EdgeOptions()
+    options = Options()
     options.add_argument("--headless")
     # Start a Microsoft Edge webdriver in headless mode
-    driver = webdriver.Edge(options=options)
+    driver = webdriver.Chrome(executable_path="chromedriver.exe", options=options)
     # Navigate to the specified webpage
     driver.get("https://mapa.covid.chat/")
     try:
