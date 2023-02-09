@@ -82,6 +82,9 @@ mdurl==0.1.2
 mistune==2.0.4
 munch==2.5.0
 murmurhash==1.0.9
+mysql==0.0.3
+mysql-connector==2.2.9
+mysqlclient==2.1.1
 nbclassic==0.5.1
 nbclient==0.7.2
 nbconvert==7.2.9
@@ -122,6 +125,7 @@ python-dotenv==0.21.1
 python-json-logger==2.0.4
 pytz==2022.7.1
 pytz-deprecation-shim==0.1.0.post0
+pywin32==305
 pywinpty==2.0.10
 PyYAML==6.0
 pyzmq==25.0.0
@@ -132,6 +136,8 @@ rfc3986-validator==0.1.1
 rich==13.3.1
 scikit-learn==1.2.1
 scipy==1.10.0
+sdmetrics==0.9.0
+sdv==0.18.0
 seaborn==0.12.2
 selenium==4.8.0
 semver==2.13.0
