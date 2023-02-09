@@ -232,7 +232,80 @@ with tab1:
         st.write("""##### Pre dnesnok este nenahodili udaje pre Ag testy , skuste skorsi datum""")
 
 with tab2:
-   st.write("bohuzial streamlit nevie cez github dynamicky scrapovat stranky")
+    st.write("bohuzial streamlit io nevie tento content nacitat , pre viac info pozrite moj github")
+    st.write("https://github.com/sorujko/Bc")
+#     import pandas as pd
+#     from selenium import webdriver
+#     from selenium.webdriver.common.by import By
+#     from selenium.webdriver.support.ui import WebDriverWait
+#     from selenium.webdriver.support import expected_conditions as EC
+#     from selenium.webdriver.chrome.options import Options
+#     import numpy as np
+
+
+#     options = Options()
+#     options.add_argument("--headless")
+#     # Start a Microsoft Edge webdriver in headless mode
+#     driver = webdriver.Chrome(executable_path="chromedriver.exe", options=options)
+#     # Navigate to the specified webpage
+#     driver.get("https://mapa.covid.chat/")
+#     try:
+#         if len(driver.find_elements(By.ID, "c-p-bn")) > 0:
+#             # Click on the accept cookies button
+#             driver.find_element(By.ID, "c-p-bn").click()
+#     except:
+#         pass
+#     # Wait for the tbody element with id "cities-table" to be present
+
+#     try:
+#         wait = WebDriverWait(driver ,timeout=10)
+#         wait.until(EC.text_to_be_present_in_element((By.XPATH, "//tbody[@id='cities-table']"), "Prievidza"))
+
+#     except:
+#         pass
+#     tbody = driver.find_element(By.XPATH, "//tbody[@id='cities-table']")
+#     # Get the rows from the tbody element
+#     rows = tbody.find_elements(By.XPATH, "tr")
+
+#     # Store the data in a list
+#     data = []
+#     for row in rows:
+#         cells = row.find_elements(By.XPATH, "td")
+#         row_data = [cell.text for cell in cells]
+#         data.append(row_data)
+
+#     # Create a pandas dataframe from the data
+#     df = pd.DataFrame(data, columns=['okres', 'pocet', 'nove_pripady'])
+#     df.sort_values(by=['okres'] , inplace=True)
+#     df.to_csv("covid_data2.csv", index=False, encoding='UTF-8-sig')
+
+
+#     # Close the webdriver
+#     driver.quit()
+#     import geopandas as gpd
+#     import matplotlib.pyplot as plt
+#     import pandas as pd
+#     import numpy as np
+#     st.write("Ak sa nezobrazí modrá mapa/nie su na nej cisla , dajte prosim Rerun , aj viackrat , ano funguje to xD")
+#     # Load your GeoDataFrame
+#     okresy = pd.read_csv('covid_data2.csv')
+#     okresy.fillna(0, inplace=True)
+#     okresy['nove_pripady'] = okresy['nove_pripady'].astype(np.int64)
+
+#     gdf = gpd.read_file('districts.shp', encoding = 'utf8')
+#     gdf = gpd.GeoDataFrame(gdf, geometry='geometry')
+#     gdf.crs = 'epsg:4326'
+#     # Plot the GeoDataFrame
+#     ax = gdf.plot()
+#     annotations = []
+#     for i,row in gdf.iterrows():
+#         if okresy.iloc[i,2]>0:
+#             annotation=plt.annotate(okresy.iloc[i,2], xy=row.geometry.centroid.coords[0], ha='center', fontsize=10)
+#             annotations.append(annotation)
+#     # Show the plot
+#     fig= ax.get_figure()
+#     st.pyplot(fig)
+#     st.image('okresy.png')
     
 
 
