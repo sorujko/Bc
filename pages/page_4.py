@@ -100,20 +100,27 @@ with tab1:
         d=pd.DataFrame()
         d['kraje']=kraje_nazvy
         d['pocty_poz']=kraje
-        col1, col2 = st.columns([1,2],gap="large")
-        with col1:
-            d['kraje']=kraje_nazvy
-            d['pocty_poz']=kraje
-            fig = px.bar(d,x='pocty_poz',  y="kraje", orientation='h')
-            fig.update_layout(
-            height=400,
-            width=400,)
-            st.write(fig)
-        with col2:
-            d['kraje']=kraje_nazvy
-            d['pocty_neg']=krajen
-            fig = px.bar(d,x='pocty_neg',  y="kraje", orientation='h')
-            st.write(fig )
+        
+        fig = make_subplots(rows=1, cols=2,shared_xaxes=False,
+                    shared_yaxes=True)
+        
+
+        fig.add_trace(
+            go.Bar(x=d['pocty_poz'], y=d['kraje'] , orientation='h' , name='Pozitívne AG testy' ) ,
+            row=1, col=1
+        )
+        d['pocty_neg']=krajen
+        fig.add_trace(
+            go.Bar(x=d['pocty_neg'], y=d['kraje'] , orientation='h',name='Negatívne AG testy' ),
+            row=1, col=2
+        )
+        fig.update_yaxes(title_text="kraje" , col=1)
+
+        # Update the X axis labels
+        fig.update_xaxes(title_text="pozitivne ag testy", col=1)
+        fig.update_xaxes(title_text="negativne ag testy", col=2)
+        
+        st.plotly_chart(fig, use_container_width=True)
         
 
         #tu su pie charty matplotlib prve 4
