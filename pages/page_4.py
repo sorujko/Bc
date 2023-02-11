@@ -234,8 +234,7 @@ with tab1:
         
             
 
-    except:
-        st.write("""##### Pre dnesnok este nenahodili udaje pre Ag testy , skuste skorsi datum""")
+  
 
 with tab2:
     st.write("Ak sa kontent nezobrazi , alebo na modrej mape nevidite cisla , dajte prosim Rerun")
