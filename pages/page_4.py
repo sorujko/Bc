@@ -120,7 +120,7 @@ with tab1:
         fig.update_xaxes(title_text="pozitivne ag testy", col=1)
         fig.update_xaxes(title_text="negativne ag testy", col=2)
         
-        st.plotly_chart(fig, use_container_width=True)
+        st.write(fig)
         
 
         #tu su pie charty matplotlib prve 4
