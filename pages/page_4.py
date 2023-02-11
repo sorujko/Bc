@@ -100,8 +100,7 @@ with tab1:
     d['kraje']=kraje_nazvy
     d['pocty_poz']=kraje
         
-    fig = make_subplots(rows=1, cols=2,shared_xaxes=False,
-                    shared_yaxes=True)
+    fig = make_subplots(rows=1, cols=2,shared_xaxes=False, shared_yaxes=True)
         
 
     fig.add_trace(
