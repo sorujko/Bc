@@ -93,7 +93,7 @@ ax1.set(xlim=(-(strana_lesa+15), (strana_lesa+15)), ylim=(-(strana_lesa+15), (st
 
 ax2.scatter(rw.x_values,rw.y_values,s=50 , c=point_numbers ,cmap=plt.cm.Blues)
 ax2.scatter(rw.x_values[0],rw.y_values[0],s=100 , c='yellow')
-ax2.scatter(rw.x_values[-1],rw.y_values[-1],s=100 , c='yellow')
+ax2.scatter(rw.x_values[-1],rw.y_values[-1],s=100 , c='red')
 
 st.pyplot(fig)
 
