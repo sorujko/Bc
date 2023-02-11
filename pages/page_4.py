@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 import datetime
 from matplotlib import pyplot as plt
+from plotly.subplots import make_subplots
 import streamlit as st
 st.set_page_config(layout="wide")
 import plotly.graph_objects as go
