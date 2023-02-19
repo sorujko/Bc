@@ -8,13 +8,12 @@ st.set_page_config(
 
 st.write("# Vitajte! 👋")
 st.write("""   \tToto je webová aplikácia , ktorú som vytvoril v rámci praktictej časti
-            bakalárskej práce. Obsahom sú momentálne 3 interatktívne podstránky , 
-            ktoré vizualizujú vygenerované dáta .""")
+            bakalárskej práce. Obsahom sú momentálne 4 interatktívne podstránky.""")
 
 st.write("#### 1.Podstránka je hod kockami")
 st.write("#### 2.Podstránka je cesta z lesa")
 st.write("#### 3.Podstránka je práca z dataframom")
-st.write("#### 4.Podstránka su realtime covid data dostupne na data.corona.gov apine")
+st.write("#### 4.Podstránka su realtime covid data dostupne na data.corona.gov API a mapa.covid.chat")
 
 st.sidebar.success("Vyberte si z ponuky hore.")
 
