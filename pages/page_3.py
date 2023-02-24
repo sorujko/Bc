@@ -1,4 +1,6 @@
 import streamlit as st
+st.set_page_config(layout='centered')
+st.title('Custom_filter')
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
