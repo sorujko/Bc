@@ -11,7 +11,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly.express as px
 st.markdown("# Dice Roller")
-st.sidebar.header("Random walk")
+st.sidebar.header("Dice Roller")
 st.sidebar.write("##### Dice Roller:")
 st.sidebar.write("""Táto stránka obsahuje 2 inputy - počet hodov
                  a počet kociek , ktoré budú hodené v backende programu
