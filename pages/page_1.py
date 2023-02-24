@@ -10,7 +10,7 @@ from random import randint
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly.express as px
-
+st.sidebar.write("##### Popis:")
 st.sidebar.write("""Táto stránka obsahuje 2 inputy - počet hodov
                  a počet kociek , ktoré budú hodené v backende programu
                  a vám sa už len zobrazí výsledok v podobe 3 dvojíc grafov.
