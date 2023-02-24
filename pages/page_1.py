@@ -7,6 +7,7 @@ st.set_page_config(
 import numpy as np
 import matplotlib.pyplot as plt
 from random import randint
+import random
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly.express as px
@@ -17,7 +18,9 @@ st.sidebar.write("""Táto stránka obsahuje 2 inputy - počet hodov
                  a počet kociek , ktoré budú hodené v backende programu
                  a vám sa už len zobrazí výsledok v podobe 3 dvojíc grafov.
                  Prvá reprezentuje súčty hodov, druhá koľkokrát padlo ktoré číslo
-                 a tretia koľko padlo párnych(2-4-6) a koľko nepárnych(1-3-5) cifier.""")
+                 a tretia koľko padlo párnych(2-4-6) a koľko nepárnych(1-3-5) cifier.
+                 Farby reprezentujú danú X hodnotu v oboch stĺpcovh , sú generovane
+                 náhodne , niekedy celkom crazy xD""")
 class Die:
     def __init__(self,num_sides=6):
         self.num_sides = num_sides
@@ -85,15 +88,19 @@ for i in range(1,7):
 os_x2=list(range(1,7))
 
 #st.write("Súčet jednotlivých hodov",text_align="center")
+farby=[]
+for item in frequencies:
+    farby.append(f'#{random.randrange(256**3):06x}')
+
 fig = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig.add_trace(
-    go.Bar(x=os_x1, y=frequencies) ,
+    go.Bar(x=os_x1, y=frequencies,marker=dict(color=farby)) ,
     row=1, col=1
 )
 
 fig.add_trace(
-    go.Pie(labels=os_x1, values=frequencies),
+    go.Pie(labels=os_x1, values=frequencies,marker=dict(colors=farby)),
     row=1, col=2
 )
 
@@ -107,16 +114,21 @@ fig.update_layout(
 )
 st.plotly_chart(fig)
 
+farby=[]
+for item in frequencies2:
+    farby.append(f'#{random.randrange(256**3):06x}')
+
+
 #st.write("Súčet 1-6")
 fig2 = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig2.add_trace(
-    go.Bar(x=os_x2, y=frequencies2),
+    go.Bar(x=os_x2, y=frequencies2,marker=dict(color=farby)),
     row=1, col=1
 )
 
 fig2.add_trace(
-    go.Pie(labels=os_x2, values=frequencies2),
+    go.Pie(labels=os_x2, values=frequencies2,marker=dict(colors=farby)),
     row=1, col=2
 )
 fig2.update_xaxes(nticks=7)
@@ -129,16 +141,21 @@ fig2.update_layout(
 
 st.plotly_chart(fig2)
 
+
+farby=[]
+for i in range(2):
+    farby.append(f'#{random.randrange(256**3):06x}')
+
 #st.write("Súčet párne-nepárne")
 fig3 = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig3.add_trace(
-    go.Bar(x=['parne','neparne'], y=[parne,neparne]),
+    go.Bar(x=['parne','neparne'], y=[parne,neparne],marker=dict(color=farby)),
     row=1, col=1
 )
 
 fig3.add_trace(
-    go.Pie(labels=['parne','neparne'], values=[parne,neparne]),
+    go.Pie(labels=['parne','neparne'], values=[parne,neparne],marker=dict(colors=farby)),
     row=1, col=2
 )
 
