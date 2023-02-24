@@ -1,4 +1,17 @@
 import streamlit as st
+
+st.sidebar.write("##### Popis:")
+st.sidebar.write("""Táto stránka obsahuje 3 inputy - veľkosť strany lesa
+                 - to je ten farebný štvorec ,veľkosť kroku - od koľko
+                 do koľko sa môže vykonať , ďalši krok a celkový počet krokov.
+                 Na základe tohto inputu sa budú náhodne generovať guličky ,
+                 ktoré reprezentujú napr. strateného turistu v lese ,
+                 ak bol počet krokov na nájdenie cesty z lesa dostačujúci ,
+                 tak sa program preruší a vypíše sa výsledok , ak nie ,
+                 rak dostanete odpoveď , že ste sa stratili v lese.""")
+
+
+
 import altair as alt
 import matplotlib.pyplot as plt
 import numpy as np
@@ -42,7 +55,7 @@ class Randomwalk:
                 self.vysledok=f'ÚSPEŠNE STE SA DOSTALI LESA (minuli ste { len(self.x_values)} z { self.pocet_krokov} krokov).'
                 break
 
-st.set_page_config(page_title="Random walk", page_icon="📈")
+st.set_page_config(page_title="Random walk")
 
 st.markdown("# Random walk")
 st.sidebar.header("Random walk")
