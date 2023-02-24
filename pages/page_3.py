@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(layout='centered')
+st.set_page_config(layout='centered' , page_title="Custom filter")
 st.title('Custom_filter')
 
 st.sidebar.header("Custom Filter")
