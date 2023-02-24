@@ -4,7 +4,32 @@ import datetime
 from matplotlib import pyplot as plt
 from plotly.subplots import make_subplots
 import streamlit as st
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide' , page_title="Covid")
+
+st.sidebar.header("Covid")
+st.sidebar.write("##### Popis:")
+st.sidebar.write("""Táto stránka obsahuje 2 podstránky:
+                 
+                 Prvá obsahuje dátumový input widget , ktorý hovorí o tom,
+                 od ktorého dňa po dnešok chceme sledovať dané štatistiky.
+                 Tieto štatistiky sú : 1.Koľko luďí sa zaočkovalo proti Covidu,
+                 2.Koľko pribudlo pozitívnych/negatívnych Ag.testov v jednotlivých 
+                 krajoch a aká je pozitivita v jednotlivých krajoch. Na stránke
+                 tejto API je uvedené , že je experimentálna a teda v budúcnosti 
+                 bude už možno zrušená , rovnako aj platí , že nezvnikla na začiatku
+                 vypuknutia pandémie a teda neobsahuje všetky údaje z minulosti.
+                 Odkaz: https://data.korona.gov.sk/
+                    
+                 Druhá podstránka obsahuje mapu Slovenka , zobrazenú pomocou
+                 knižnice geopandas a táto mapa obsahuje údaje o tom , 
+                 koľko nakazených odhalili PCR testy za predošlí deň.
+                 Tieto údaje zbieram pomocou webscrapingovej knižnice Folium
+                 zo stránky: https://mapa.covid.chat/ , ktorá je dynamicky
+                 generovaná. Vlastne pri každom refreshi tejto stránky(page_4)
+                 sa tieto zobrazené údaje stahujú z uvedenej stránky , takže
+                 ak to náhodou trvá , alebo sa vám čísla v jednotlivých okresoch
+                 nezobrazia , dajte prosím  rerun(možno aj viackrát) a počkajte.
+                 """)
 st.title('Covid')
 import plotly.graph_objects as go
 
