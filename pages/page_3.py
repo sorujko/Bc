@@ -1,6 +1,16 @@
 import streamlit as st
 st.set_page_config(layout='centered')
 st.title('Custom_filter')
+
+st.sidebar.header("Custom Filter")
+st.sidebar.write("##### Popis:")
+st.sidebar.write("""Táto stránka obsahuje rôzne typy widgetov ,
+                 ktoré sa dajú použiť napr. ako v tomto prípade nad datasetom.
+                 Ako napr. klasické grafy , ale napríklad aj animované priebehy ,
+                 ktoré sa ešte samé o sebe daju filtrovať napr. pomocou stanovenia
+                 časovej hranice od-do.
+                 """)
+
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
