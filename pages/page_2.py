@@ -1,14 +1,5 @@
 import streamlit as st
 
-st.sidebar.write("##### Popis:")
-st.sidebar.write("""Táto stránka obsahuje 3 inputy - veľkosť strany lesa
-                 - to je ten farebný štvorec ,veľkosť kroku - od koľko
-                 do koľko sa môže vykonať , ďalši krok a celkový počet krokov.
-                 Na základe tohto inputu sa budú náhodne generovať guličky ,
-                 ktoré reprezentujú napr. strateného turistu v lese ,
-                 ak bol počet krokov na nájdenie cesty z lesa dostačujúci ,
-                 tak sa program preruší a vypíše sa výsledok , ak nie ,
-                 rak dostanete odpoveď , že ste sa stratili v lese.""")
 
 
 
@@ -59,6 +50,15 @@ st.set_page_config(page_title="Random walk")
 
 st.markdown("# Random walk")
 st.sidebar.header("Random walk")
+st.sidebar.write("##### Popis:")
+st.sidebar.write("""Táto stránka obsahuje 3 inputy - veľkosť strany lesa
+                 - to je ten farebný štvorec ,veľkosť kroku - od koľko
+                 do koľko sa môže vykonať , ďalši krok a celkový počet krokov.
+                 Na základe tohto inputu sa budú náhodne generovať guličky ,
+                 ktoré reprezentujú napr. strateného turistu v lese ,
+                 ak bol počet krokov na nájdenie cesty z lesa dostačujúci ,
+                 tak sa program preruší a vypíše sa výsledok , ak nie ,
+                 rak dostanete odpoveď , že ste sa stratili v lese.""")
 
 
 col1, col2, col3 = st.columns(3)
