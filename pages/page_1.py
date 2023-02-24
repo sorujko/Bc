@@ -84,7 +84,7 @@ for i in range(1,7):
 
 os_x2=list(range(1,7))
 
-st.write("Súčet jednotlivých hodov",text_align="center")
+#st.write("Súčet jednotlivých hodov",text_align="center")
 fig = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig.add_trace(
@@ -100,6 +100,11 @@ fig.add_trace(
 
 fig.update_xaxes(nticks=max_sucet)
 
+fig.update_layout(
+    title="Súčet jednotlivých hodov",
+    title_x=0.5,
+    title_y=0.9
+)
 st.plotly_chart(fig)
 
 st.write("Súčet 1-6")
