@@ -73,7 +73,7 @@ with tab1:
         d['pocty_novo_zaockovanych']=kraje
 
         import plotly.express as px
-        fig = px.bar(d,x='pocty_novo_zaockovanych',  y="kraje", orientation='h')
+        fig = px.bar(d,x='pocty_novo_zaockovanych',  y="kraje", orientation='h' , title="Novo zaočkovaní")
 
         #st.write(fig)
         st.plotly_chart(fig, use_container_width=True)
