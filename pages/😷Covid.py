@@ -347,11 +347,10 @@ with tab2:
     # Show the plot
     fig= ax.get_figure()
     
-    from PIL import Image
-    image = Image.open('images/okresy.png')
+    
     
     st.pyplot(fig , use_container_width=True)
-    st.image(image,use_column_width=True)
+    st.image('images/okresy.png')
     
 
 
