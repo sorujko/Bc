@@ -347,7 +347,7 @@ with tab2:
     # Show the plot
     fig= ax.get_figure()
     st.pyplot(fig , use_container_width=True)
-    st.image('images/okresy.png')
+    st.image('images/okresy.png',use_column_width=True)
     
 
 
