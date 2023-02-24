@@ -346,8 +346,12 @@ with tab2:
             annotations.append(annotation)
     # Show the plot
     fig= ax.get_figure()
+    
+    from PIL import Image
+    image = Image.open('images/okresy.png')
+    
     st.pyplot(fig , use_container_width=True)
-    st.image('images/okresy.png',use_column_width='always')
+    st.image(image,use_column_width=True)
     
 
 
