@@ -74,7 +74,11 @@ with tab1:
 
         import plotly.express as px
         fig = px.bar(d,x='pocty_novo_zaockovanych',  y="kraje", orientation='h')
-        fig.update_layout(title_text='Novo zaočkovaní')
+        fig.update_layout(
+          title='Novo zaočkovaní',
+          title_x=0.5,
+          title_y=0.9
+        )
         
         #st.write(fig)
         st.plotly_chart(fig, use_container_width=True)
@@ -147,8 +151,11 @@ with tab1:
     fig.update_xaxes(title_text="pozitivne ag testy", col=1)
     fig.update_xaxes(title_text="negativne ag testy", col=2)
     
-    fig.update_layout(title_text='+|- Ag. testy')
-    
+    fig.update_layout(
+      title='+|- Ag. testy',
+      title_x=0.5,
+      title_y=0.9
+    )
     st.plotly_chart(fig, use_container_width=True)
         
 
