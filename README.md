@@ -1,2 +1,2 @@
-Dátova analýza a vizualizácia v pythone \n
-https://sorujko-bc-stremalit-app-59ug9i.streamlit.app/
+Dátova analýza a vizualizácia v pythone
+https://sorujko-bc-welcome-t301n8.streamlit.app/
