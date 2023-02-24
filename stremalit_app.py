@@ -1,9 +1,9 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Welcome",
-    page_icon="👋",
-)
+     page_title="Ex-stream-ly Cool App",
+     page_icon="👋"
+ )
 
 
 st.write("# Vitajte! 👋")
