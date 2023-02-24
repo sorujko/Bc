@@ -4,7 +4,7 @@ import datetime
 from matplotlib import pyplot as plt
 from plotly.subplots import make_subplots
 import streamlit as st
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Covid'layout='wide')
 import plotly.graph_objects as go
 
 plt.style.use("fivethirtyeight")
