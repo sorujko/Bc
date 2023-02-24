@@ -75,7 +75,8 @@ with tab1:
         import plotly.express as px
         fig = px.bar(d,x='pocty_novo_zaockovanych',  y="kraje", orientation='h')
 
-        st.write(fig)
+        #st.write(fig)
+        st.plotly_chart(fig, use_container_width=True)
     except:
         st.write("""##### Pre dnesnok este nenahodili udaje  , skuste skorsi datum""")
 
