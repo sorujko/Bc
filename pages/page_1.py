@@ -1,7 +1,6 @@
 import streamlit as st
 st.set_page_config(
-    page_title="Dice Roller",
-    page_icon="🎲"
+    page_title="Dice Roller"
 )
 
 
@@ -12,7 +11,11 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly.express as px
 
-st.sidebar.write("Hello sadsadsdsadasdasdsad")
+st.sidebar.write("""Táto stránka obsahuje 2 inputy - počet hodov
+                 a počet kociek , ktoré budú hodené v backende programu
+                 a vám sa už len zobrazí výsledok v podobe 3 dvojíc grafov.
+                 Prvá reprezentuje súčty hodov, druhá koľkokrát padlo ktoré číslo
+                 a tretia koľko padlo párnych(2-4-6) a koľko nepárnych(1-3-5) cifier.""")
 class Die:
     def __init__(self,num_sides=6):
         self.num_sides = num_sides
