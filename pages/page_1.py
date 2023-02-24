@@ -1,4 +1,10 @@
 import streamlit as st
+st.set_page_config(
+    page_title="Dice Roller",
+    page_icon="🎲"
+)
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from random import randint
