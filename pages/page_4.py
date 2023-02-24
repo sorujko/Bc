@@ -74,7 +74,7 @@ with tab1:
 
         import plotly.express as px
         fig = px.bar(d,x='pocty_novo_zaockovanych',  y="kraje", orientation='h')
-        fig.update_layout(title_text='Novo zaočkovaní', title_x=0.5)
+        fig.update_layout(title_text='Novo zaočkovaní', title_Y=0.5)
         
         #st.write(fig)
         st.plotly_chart(fig, use_container_width=True)
