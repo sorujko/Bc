@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 st.markdown("# Dice Roller")
 st.sidebar.header("Dice Roller")
-st.sidebar.write("##### Dice Roller:")
+st.sidebar.write("##### Popis:")
 st.sidebar.write("""Táto stránka obsahuje 2 inputy - počet hodov
                  a počet kociek , ktoré budú hodené v backende programu
                  a vám sa už len zobrazí výsledok v podobe 3 dvojíc grafov.
