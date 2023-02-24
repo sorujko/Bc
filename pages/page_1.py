@@ -107,7 +107,7 @@ fig.update_layout(
 )
 st.plotly_chart(fig)
 
-st.write("Súčet 1-6")
+#st.write("Súčet 1-6")
 fig2 = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig2.add_trace(
@@ -120,6 +120,13 @@ fig2.add_trace(
     row=1, col=2
 )
 fig2.update_xaxes(nticks=7)
+
+fig2.update_layout(
+    title="Súčet 1-6",
+    title_x=0.5,
+    title_y=0.9
+)
+
 st.plotly_chart(fig2)
 
 st.write("Súčet párne-nepárne")
@@ -133,6 +140,12 @@ fig3.add_trace(
 fig3.add_trace(
     go.Pie(labels=['parne','neparne'], values=[parne,neparne]),
     row=1, col=2
+)
+
+fig.update_layout(
+    title="Párne-nepárne",
+    title_x=0.5,
+    title_y=0.9
 )
 st.plotly_chart(fig3)
 
