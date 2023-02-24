@@ -6,7 +6,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly.express as px
 
-
+st.sidebar.write("Hello sadsadsdsadasdasdsad")
 class Die:
     def __init__(self,num_sides=6):
         self.num_sides = num_sides
