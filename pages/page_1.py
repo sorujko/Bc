@@ -142,7 +142,7 @@ fig3.add_trace(
     row=1, col=2
 )
 
-fig.update_layout(
+fig3.update_layout(
     title="Párne-nepárne",
     title_x=0.5,
     title_y=0.9
