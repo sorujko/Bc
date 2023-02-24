@@ -20,7 +20,8 @@ st.sidebar.write("""Táto stránka obsahuje 2 inputy - počet hodov
                  Prvá reprezentuje súčty hodov, druhá koľkokrát padlo ktoré číslo
                  a tretia koľko padlo párnych(2-4-6) a koľko nepárnych(1-3-5) cifier.
                  Farby reprezentujú danú X hodnotu v oboch stĺpcovh , sú generovane
-                 náhodne , niekedy celkom crazy xD""")
+                 náhodne , niekedy celkom crazy xD.
+                 Keď ich náhodou od seba neviete rozoznať , tak re-roll i guess.""")
 class Die:
     def __init__(self,num_sides=6):
         self.num_sides = num_sides
