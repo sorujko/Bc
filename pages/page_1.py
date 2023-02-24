@@ -129,7 +129,7 @@ fig2.update_layout(
 
 st.plotly_chart(fig2)
 
-st.write("Súčet párne-nepárne")
+#st.write("Súčet párne-nepárne")
 fig3 = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig3.add_trace(
