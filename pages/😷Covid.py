@@ -346,7 +346,7 @@ with tab2:
             annotations.append(annotation)
     # Show the plot
     fig= ax.get_figure()
-    st.pyplot(fig)
+    st.pyplot(fig , use_container_width=True)
     st.image('images/okresy.png')
     
 
