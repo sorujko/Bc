@@ -4,13 +4,12 @@ st.set_page_config(
 )
 
 
-import numpy as np
-import matplotlib.pyplot as plt
+
 from random import randint
 import random
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-import plotly.express as px
+
 st.markdown("# Dice Roller")
 st.sidebar.header("Dice Roller")
 st.sidebar.write("##### Popis:")
