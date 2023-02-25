@@ -8,9 +8,9 @@ st.set_page_config(layout='wide' , page_title="Covid")
 
 st.sidebar.header("Covid")
 st.sidebar.write("##### Popis:")
-st.sidebar.write("#####Táto stránka obsahuje 2 podstránky:")
+st.sidebar.write("##### Táto stránka obsahuje 2 podstránky:")
                  
-st.sidebar.write("""Prvá obsahuje dátumový input widget , ktorý hovorí o tom,
+st.sidebar.write("""  Prvá obsahuje dátumový input widget , ktorý hovorí o tom,
 od ktorého dňa po dnešok chceme sledovať dané štatistiky.
 Tieto štatistiky sú : 1.Koľko luďí sa zaočkovalo proti Covidu,
 2.Koľko pribudlo pozitívnych/negatívnych Ag.testov v jednotlivých 
@@ -21,7 +21,7 @@ vypuknutia pandémie a teda neobsahuje všetky údaje z minulosti.""")
 
 st.sidebar.write("Zdroj: https://data.korona.gov.sk/")
                     
-st.sidebar.write("""Druhá podstránka obsahuje mapu Slovenka , zobrazenú pomocou
+st.sidebar.write("""  Druhá podstránka obsahuje mapu Slovenka , zobrazenú pomocou
 knižnice geopandas a táto mapa obsahuje údaje o tom , 
 koľko nakazených odhalili PCR testy za predošlí deň.
 Tieto údaje zbieram pomocou webscrapingovej knižnice Folium, ktorá je dynamicky
