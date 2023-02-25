@@ -5,7 +5,7 @@ st.set_page_config(
  )
 
 
-st.sidebar.write("### github:")
+st.sidebar.write("### GitHub")
 st.sidebar.write("##### Pozri kód tu:")
 st.sidebar.write("https://github.com/sorujko/Bc")
 st.sidebar.write()
@@ -27,13 +27,4 @@ st.write("#### 2.Podstránka obsahuje cestu z lesa")
 st.write("#### 3.Podstránka obsahuje prácu z dataframom")
 st.write("#### 4.Podstránka obsahuje realtime covid data")
 
-st.sidebar.success("Vyberte si z ponuky hore.")
 
-#streamlit run c:/Users/matdu/Desktop/aplikacia/myapp/stremalit_app.py
-
-#dat k tomu 1 mapu a vyznacit krajiny ktore su v tom boxe
-
-#dat toho jak je ten chodec nejake ohranicenie , ze ci prekona tu lajnu
-
-#dat novu podla videa , ze zadas text o ono ti to vsetky znaky vypise
-# a spocita , nejake grafy a tak
