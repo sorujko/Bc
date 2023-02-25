@@ -5,6 +5,19 @@ st.set_page_config(
  )
 
 
+st.sidebar.write("### github:")
+st.sidebar.write("##### Pozri kód tu:")
+st.sidebar.write("https://github.com/sorujko/Bc")
+st.sidebar.write()
+st.sidebar.write("### CRZP:")
+st.sidebar.write("##### Pozri bakalárku tu:")
+st.sidebar.write("Tu bude link na CRZP")
+
+
+
+
+
+
 st.write("# Vitajte! 👋")
 st.write("Toto je webová aplikácia , ktorú som vytvoril v rámci praktictej časti bakalárskej práce.")
 st.write("Obsahom sú 4 interatktívne podstránky.")
