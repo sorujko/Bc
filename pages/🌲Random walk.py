@@ -1,11 +1,5 @@
 import streamlit as st
-
-
-
-
-import altair as alt
 import matplotlib.pyplot as plt
-import numpy as np
 from random import choice
 
 class Randomwalk:
