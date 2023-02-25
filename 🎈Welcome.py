@@ -13,7 +13,7 @@ st.write("#### 1.Podstránka je hod kockami")
 st.write("#### 2.Podstránka je cesta z lesa")
 st.write("#### 3.Podstránka je práca z dataframom")
 st.write("""#### 4.Podstránka su realtime covid data dostupne 
-                   na data.corona.gov API a mapa.covid.chat""")
+               ### na data.corona.gov API a mapa.covid.chat""")
 
 st.sidebar.success("Vyberte si z ponuky hore.")
 
