@@ -9,11 +9,10 @@ st.write("# Vitajte! 👋")
 st.write("""   \tToto je webová aplikácia , ktorú som vytvoril v rámci praktictej časti
             bakalárskej práce. Obsahom sú momentálne 4 interatktívne podstránky.""")
 
-st.write("#### 1.Podstránka je hod kockami")
-st.write("#### 2.Podstránka je cesta z lesa")
-st.write("#### 3.Podstránka je práca z dataframom")
-st.write("""#### 4.Podstránka su realtime covid data dostupne 
-    ####na data.corona.gov API a mapa.covid.chat""")
+st.write("#### 1.Podstránka obsahuje hod kockami")
+st.write("#### 2.Podstránka obsahuje cestu z lesa")
+st.write("#### 3.Podstránka obsahuje prácu z dataframom")
+st.write("#### 4.Podstránka obsahuje realtime covid data")
 
 st.sidebar.success("Vyberte si z ponuky hore.")
 
