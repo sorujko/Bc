@@ -10,7 +10,7 @@ st.sidebar.header("Covid")
 st.sidebar.write("##### Popis:")
 st.sidebar.write("#####Táto stránka obsahuje 2 podstránky:")
                  
-st.write("""Prvá obsahuje dátumový input widget , ktorý hovorí o tom,
+st.sidebar.write("""Prvá obsahuje dátumový input widget , ktorý hovorí o tom,
 od ktorého dňa po dnešok chceme sledovať dané štatistiky.
 Tieto štatistiky sú : 1.Koľko luďí sa zaočkovalo proti Covidu,
 2.Koľko pribudlo pozitívnych/negatívnych Ag.testov v jednotlivých 
@@ -19,9 +19,9 @@ tejto API je uvedené , že je experimentálna a teda v budúcnosti
 bude už možno zrušená , rovnako aj platí , že nezvnikla na začiatku
 vypuknutia pandémie a teda neobsahuje všetky údaje z minulosti.""")
 
-st.write("Zdroj: https://data.korona.gov.sk/")
+st.sidebar.write("Zdroj: https://data.korona.gov.sk/")
                     
-st.write("""Druhá podstránka obsahuje mapu Slovenka , zobrazenú pomocou
+st.sidebar.write("""Druhá podstránka obsahuje mapu Slovenka , zobrazenú pomocou
 knižnice geopandas a táto mapa obsahuje údaje o tom , 
 koľko nakazených odhalili PCR testy za predošlí deň.
 Tieto údaje zbieram pomocou webscrapingovej knižnice Folium, ktorá je dynamicky
@@ -31,7 +31,7 @@ ak to náhodou trvá , alebo sa vám čísla v jednotlivých okresoch
  nezobrazia , dajte prosím  rerun(možno aj viackrát) a počkajte.
 """)
 
-st.write("Zdroj: https://mapa.covid.chat/")
+st.sidebar.write("Zdroj: https://mapa.covid.chat/")
 
 st.title('Covid')
 import plotly.graph_objects as go
