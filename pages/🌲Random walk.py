@@ -116,7 +116,7 @@ max_rand = 10
 
 x = np.arange(0, max_x)
 ax.set_ylim(0, max_rand)
-line, = ax.plot(x, np.random.randint(0, max_rand, max_x))
+line, = ax1.plot(rw.x_values,rw.y_values , marker='o', markerfacecolor="green" )
 the_plot = st.pyplot(plt)
 
 def init():  # give a clean slate to start
