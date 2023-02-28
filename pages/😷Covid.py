@@ -277,7 +277,7 @@ with tab1:
   
 
 with tab2:
-    st.write("Ak sa kontent nezobrazi , alebo na modrej mape nevidite cisla , dajte prosim Rerun")
+    st.write("Ak sa kontent nezobrazi/nevidite na mape cisla/hodilo code error , dajte prosim Rerun(stlacenim R)")
     
     import pandas as pd
     from selenium import webdriver
