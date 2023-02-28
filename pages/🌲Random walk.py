@@ -109,7 +109,7 @@ import numpy as np
 import streamlit as st
 import time
 
-fig, ax = plt.subplots()
+fig, ax1 = plt.subplots()
 
 max_x = 5
 max_rand = 10
