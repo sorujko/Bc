@@ -104,18 +104,30 @@ ax2.scatter(rw.x_values[-1],rw.y_values[-1],s=100 , c='red')
 
 st.pyplot(fig)
 
+import matplotlib.pyplot as plt
+import numpy as np
 import streamlit as st
-import plotly.express as px
-import pandas as pd
+import time
 
-# Load example data
-df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv")
+fig, ax = plt.subplots()
 
-# Create an animated scatter plot using Plotly Express
-fig = px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", 
-                 animation_group="country", size="pop", color="continent", 
-                 hover_name="country", log_x=True, range_x=[100,100000], range_y=[20,90])
+max_x = 5
+max_rand = 10
 
-# Display the plot in the Streamlit app
-st.plotly_chart(fig)
+x = np.arange(0, max_x)
+ax.set_ylim(0, max_rand)
+line, = ax.plot(x, np.random.randint(0, max_rand, max_x))
+the_plot = st.pyplot(plt)
+
+def init():  # give a clean slate to start
+    line.set_ydata([np.nan] * len(x))
+
+def animate(i):  # update the y values (every 1000ms)
+    line.set_ydata(np.random.randint(0, max_rand, max_x))
+    the_plot.pyplot(plt)
+
+init()
+for i in range(100):
+    animate(i)
+    time.sleep(0.1)
 
