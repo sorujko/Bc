@@ -80,7 +80,7 @@ plt.style.use('classic')
 st.text(f'{rw.vysledok}')
 
 
-fig, (ax1,ax2) = plt.subplots(1,2 , sharey=True, sharex=True , figsize=(8,6))
+fig, (ax1,ax2) = plt.subplots(1,2 , sharey=True, sharex=True , figsize=(16,9), dpi=100)
 
 
 point_numbers=range(len(rw.x_values))
@@ -102,6 +102,27 @@ ax2.scatter(rw.x_values,rw.y_values,s=50 , c=point_numbers ,cmap=plt.cm.Blues)
 ax2.scatter(rw.x_values[0],rw.y_values[0],s=100 , c='yellow')
 ax2.scatter(rw.x_values[-1],rw.y_values[-1],s=100 , c='red')
 
+st.pyplot(fig)
+
+import streamlit as st
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
+# create a figure and axis
+fig, ax = plt.subplots()
+
+# define the update function for the animation
+def update(frame):
+    # update the plot for the current frame
+    ax.clear()
+    x = range(frame)
+    y = [i ** 2 for i in x]
+    ax.plot(x, y)
+    ax.set_xlim(0, 100)
+    ax.set_ylim(0, 10000)
+
+# create the animation object and display it in Streamlit
+ani = FuncAnimation(fig, update, frames=100, interval=100)
 st.pyplot(fig)
 
 #pridat tu spravu o tom ci sa dostali z lesa alebo nie
