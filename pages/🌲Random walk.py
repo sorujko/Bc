@@ -115,7 +115,7 @@ max_x = 5
 max_rand = 10
 
 x = np.arange(0, max_x)
-ax.set_ylim(0, max_rand)
+ax1.set_ylim(0, rw.strana_lesa)
 line, = ax1.plot(rw.x_values,rw.y_values , marker='o', markerfacecolor="green" )
 the_plot = st.pyplot(plt)
 
