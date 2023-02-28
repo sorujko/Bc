@@ -95,12 +95,13 @@ for item in frequencies:
 fig = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig.add_trace(
-    go.Bar(x=os_x1, y=frequencies,marker=dict(color=farby)) ,
+    go.Bar(x=os_x1, y=frequencies,marker=dict(color=farby), showlegend=False ,name='',hovertemplate='sucet=%{x}, pocet=%{y}') ,
     row=1, col=1
 )
 
 fig.add_trace(
-    go.Pie(labels=os_x1, values=frequencies,marker=dict(colors=farby)),
+    go.Pie(labels=os_x1, values=frequencies,marker=dict(colors=farby),name='',
+           hovertemplate='sucet: %{label}<br>pocet: %{value}<br>percento: %{percent}'),
     row=1, col=2
 )
 
@@ -123,12 +124,13 @@ for item in frequencies2:
 fig2 = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig2.add_trace(
-    go.Bar(x=os_x2, y=frequencies2,marker=dict(color=farby)),
+    go.Bar(x=os_x2, y=frequencies2,marker=dict(color=farby), showlegend=False ,name='',hovertemplate='sucet=%{x}, pocet=%{y}'),
     row=1, col=1
 )
 
 fig2.add_trace(
-    go.Pie(labels=os_x2, values=frequencies2,marker=dict(colors=farby)),
+    go.Pie(labels=os_x2, values=frequencies2,marker=dict(colors=farby),name='',
+           hovertemplate='sucet: %{label}<br>pocet: %{value}<br>percento: %{percent}'),
     row=1, col=2
 )
 fig2.update_xaxes(nticks=7)
@@ -150,12 +152,13 @@ for i in range(2):
 fig3 = make_subplots(rows=1, cols=2 ,specs=[[{'type': 'xy'},{'type': 'domain'}]] )
 
 fig3.add_trace(
-    go.Bar(x=['parne','neparne'], y=[parne,neparne],marker=dict(color=farby)),
+    go.Bar(x=['parne','neparne'], y=[parne,neparne],marker=dict(color=farby), showlegend=False ,name='',hovertemplate='%{x}, pocet=%{y}'),
     row=1, col=1
 )
 
 fig3.add_trace(
-    go.Pie(labels=['parne','neparne'], values=[parne,neparne],marker=dict(colors=farby)),
+    go.Pie(labels=['parne','neparne'], values=[parne,neparne],marker=dict(colors=farby),name='',
+           hovertemplate='%{label}<br>pocet: %{value}<br>percento: %{percent}'),
     row=1, col=2
 )
 
