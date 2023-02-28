@@ -109,21 +109,19 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import numpy as np
 
-# Create a new figure and axis for the animation
-fig, ax = plt.subplots()
-
 # Define a function to update the plot for each animation frame
 def update(frame):
     x = np.linspace(0, 2 * np.pi, 200)
     y = np.sin(2 * np.pi * (x - 0.01 * frame))
-    ax.clear()
+    fig, ax = plt.subplots()
     ax.plot(x, y)
+    ax.set_ylim([-1, 1])
+    ax.set_title('Frame {}'.format(frame))
+    return fig
 
 # Create the animation object using the update function and 100 frames
 ani = animation.FuncAnimation(fig, update, frames=100, interval=50)
 
 # Display the animation in the Streamlit app
-st.pyplot(fig, animated=True)
+st.write(ani.to_jshtml(), format="html")
 
-
-#pridat tu spravu o tom ci sa dostali z lesa alebo nie
