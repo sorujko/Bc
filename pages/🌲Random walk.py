@@ -80,7 +80,7 @@ plt.style.use('classic')
 st.text(f'{rw.vysledok}')
 
 
-fig, (ax1,ax2) = plt.subplots(1,2 , sharey=True, sharex=True , figsize=(16,9), dpi=100)
+fig, (ax1,ax2) = plt.subplots(1,2 , sharey=True, sharex=True , figsize=(8,6))
 
 
 point_numbers=range(len(rw.x_values))
