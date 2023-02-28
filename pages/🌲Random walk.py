@@ -106,23 +106,24 @@ st.pyplot(fig)
 
 import streamlit as st
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
+import matplotlib.animation as animation
+import numpy as np
 
-# create a figure and axis
+# Create a new figure and axis for the animation
 fig, ax = plt.subplots()
 
-# define the update function for the animation
+# Define a function to update the plot for each animation frame
 def update(frame):
-    # update the plot for the current frame
+    x = np.linspace(0, 2 * np.pi, 200)
+    y = np.sin(2 * np.pi * (x - 0.01 * frame))
     ax.clear()
-    x = range(frame)
-    y = [i ** 2 for i in x]
     ax.plot(x, y)
-    ax.set_xlim(0, 100)
-    ax.set_ylim(0, 10000)
 
-# create the animation object and display it in Streamlit
-ani = FuncAnimation(fig, update, frames=100, interval=100)
-st.pyplot(fig)
+# Create the animation object using the update function and 100 frames
+ani = animation.FuncAnimation(fig, update, frames=100, interval=50)
+
+# Display the animation in the Streamlit app
+st.pyplot(fig, animated=True)
+
 
 #pridat tu spravu o tom ci sa dostali z lesa alebo nie
