@@ -118,7 +118,7 @@ ax1.plot(x4, y4, marker = 'o')
 ax1.set(xlim=(-(strana_lesa+15), (strana_lesa+15)), ylim=(-(strana_lesa+15), (strana_lesa+15)))
 
 
-line, = ax1.plot(rw.x_values[0+2],rw.y_values[0+2] , marker='o', markerfacecolor="green" )
+line, = ax1.plot(rw.x_values[0],rw.y_values[0] , marker='o', markerfacecolor="green" )
 
 the_plot = st.pyplot(plt)
 
@@ -126,7 +126,7 @@ def animate(i):  # update the y values (every 1000ms)
    try:
         line=ax1.plot(rw.x_values[i:i+2],rw.y_values[i:i+2] , marker='o', markerfacecolor="green"  )
 
-        line.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
+        ax1.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
 
         the_plot.pyplot(plt)
    except:
@@ -134,8 +134,8 @@ def animate(i):  # update the y values (every 1000ms)
 
 
 for i in range(1,len(point_numbers)+1):
-   animate(i)
-   time.sleep(0.1)
+    animate(i)
+    time.sleep(0.1)
 
 
 
