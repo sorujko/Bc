@@ -51,8 +51,9 @@ st.sidebar.write("""Táto stránka obsahuje 3 inputy - veľkosť strany lesa
                  Na základe tohto inputu sa budú náhodne generovať guličky ,
                  ktoré reprezentujú napr. strateného turistu v lese ,
                  ak bol počet krokov na nájdenie cesty z lesa dostačujúci ,
-                 tak sa program preruší a vypíše sa výsledok , ak nie ,
-                 rak dostanete odpoveď , že ste sa stratili v lese.""")
+                 tak sa program preruší a vypíše sa výsledok , zároveň sa objaví
+                 animovaní graf , ktorý ukazuje postupnosť krokov.Ak nie ,
+                 tak dostanete odpoveď , že ste sa stratili v lese a objaví sa video.""")
 
 
 col1, col2, col3 = st.columns(3)
