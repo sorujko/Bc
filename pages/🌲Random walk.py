@@ -108,6 +108,7 @@ st.pyplot(fig)
 
 
 import time
+import matplotlib.pyplot as plt
 
 fig, ax1 = plt.subplots()
 
@@ -120,7 +121,7 @@ ax1.set(xlim=(-(strana_lesa+15), (strana_lesa+15)), ylim=(-(strana_lesa+15), (st
 
 line, = ax1.plot(rw.x_values[0],rw.y_values[0] , marker='o', markerfacecolor="green" )
 
-the_plot = st.pyplot(plt)
+
 
 def animate(i):  # update the y values (every 1000ms)
     try:
