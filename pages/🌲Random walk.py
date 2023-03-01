@@ -128,12 +128,12 @@ def animate(i):  # update the y values (every 1000ms)
 
         line.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
 
-        the_plot.pyplot(plt)
+        the_plot.pyplot(line)
    except:
            pass
 
 
-for i in range(len(point_numbers)):
+for i in range(1,len(point_numbers)+1):
    animate(i)
    time.sleep(0.1)
 
