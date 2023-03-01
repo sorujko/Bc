@@ -123,14 +123,14 @@ line, = ax1.plot(rw.x_values[0+2],rw.y_values[0+2] , marker='o', markerfacecolor
 the_plot = st.pyplot(plt)
 
 def animate(i):  # update the y values (every 1000ms)
-    try:
-        line=ax1.plot(rw.x_values[i:i+2],rw.y_values[i:i+2] , marker='o', markerfacecolor="green"  )
+	try:
+        	line=ax1.plot(rw.x_values[i:i+2],rw.y_values[i:i+2] , marker='o', markerfacecolor="green"  )
 
-        line.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
+        	line.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
 
-        the_plot.pyplot(plt)
-    except:
-        pass
+        	the_plot.pyplot(plt)
+	except:
+        	pass
 
 
 for i in range(len(point_numbers)):
