@@ -135,7 +135,7 @@ def animate(i):  # update the y values (every 1000ms)
 
 for i in range(1,len(point_numbers)+1):
     animate(i)
-    time.sleep(0.1)
+ 
 
 
 
