@@ -122,7 +122,7 @@ ax1.set(xlim=(-(strana_lesa+15), (strana_lesa+15)), ylim=(-(strana_lesa+15), (st
 
 
 #line, = ax1.plot(rw.x_values,rw.y_values , marker='o', markerfacecolor="green" )
-the_plot = st.pyplot(plt)
+the_plot = st.pyplot(fig)
 
 #def init():  # give a clean slate to start
 #    line.set_ydata([np.nan] * len(x))
@@ -133,7 +133,7 @@ def animate(i):  # update the y values (every 1000ms)
         
         ax1.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
         
-        the_plot.pyplot(plt)
+        the_plot.pyplot(fig)
     except:
         pass
 
