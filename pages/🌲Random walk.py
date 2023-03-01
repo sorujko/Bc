@@ -108,9 +108,11 @@ st.pyplot(fig)
 
 
 import time
-import matplotlib.pyplot as plt
 
 fig, ax1 = plt.subplots()
+
+max_x = 5
+max_rand = 10
 
 ax1.plot(x1, y1, marker = 'o')
 ax1.plot(x2, y2, marker = 'o')
@@ -119,24 +121,26 @@ ax1.plot(x4, y4, marker = 'o')
 ax1.set(xlim=(-(strana_lesa+15), (strana_lesa+15)), ylim=(-(strana_lesa+15), (strana_lesa+15)))
 
 
-line, = ax1.plot(rw.x_values[0],rw.y_values[0] , marker='o', markerfacecolor="green" )
+#line, = ax1.plot(rw.x_values,rw.y_values , marker='o', markerfacecolor="green" )
+the_plot = st.pyplot(plt)
 
-
+#def init():  # give a clean slate to start
+#    line.set_ydata([np.nan] * len(x))
 
 def animate(i):  # update the y values (every 1000ms)
     try:
         line=ax1.plot(rw.x_values[i:i+2],rw.y_values[i:i+2] , marker='o', markerfacecolor="green"  )
-
+        
         ax1.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
-
+        
         the_plot.pyplot(plt)
     except:
-           pass
+        pass
 
 
 for i in range(len(point_numbers)):
     animate(i)
-    time.sleep(0.01)
+    time.sleep(0.1)
     
 
 
