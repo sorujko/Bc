@@ -107,32 +107,37 @@ st.pyplot(fig)
 #pridat tu spravu o tom ci sa dostali z lesa alebo nie
 
 
-import matplotlib.pyplot as plt
-import numpy as np
-import streamlit as st
 import time
 
-fig, ax = plt.subplots()
+fig, ax1 = plt.subplots()
 
-max_x = 5
-max_rand = 10
+ax1.plot(x1, y1, marker = 'o')
+ax1.plot(x2, y2, marker = 'o')
+ax1.plot(x3, y3, marker = 'o')
+ax1.plot(x4, y4, marker = 'o')
+ax1.set(xlim=(-(strana_lesa+15), (strana_lesa+15)), ylim=(-(strana_lesa+15), (strana_lesa+15)))
 
-x = np.arange(0, max_x)
-ax.set_ylim(0, max_rand)
-line, = ax.plot(x, np.random.randint(0, max_rand, max_x))
+
+line, = ax1.plot(rw.x_values[0+2],rw.y_values[0+2] , marker='o', markerfacecolor="green" )
+
 the_plot = st.pyplot(plt)
 
-def init():  # give a clean slate to start
-    line.set_ydata([np.nan] * len(x))
-
 def animate(i):  # update the y values (every 1000ms)
-    line.set_ydata(np.random.randint(0, max_rand, max_x))
-    the_plot.pyplot(plt)
+    try:
+        line=ax1.plot(rw.x_values[i:i+2],rw.y_values[i:i+2] , marker='o', markerfacecolor="green"  )
 
-init()
-for i in range(100):
-    animate(i)
+        line.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
+
+        the_plot.pyplot(plt)
+    except:
+        pass
+
+
+for i in range(len(point_numbers)):
+	animate(i)
     time.sleep(0.1)
+
+
 
 
 
