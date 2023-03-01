@@ -129,7 +129,7 @@ the_plot = st.pyplot(plt)
 
 def animate(i):  # update the y values (every 1000ms)
     try:
-        line=ax1.plot(rw.x_values[i:i+2],rw.y_values[i:i+2] , marker='o', markerfacecolor="green"  )
+        line=ax1.plot(rw.x_values[i:i+1],rw.y_values[i:i+1] , marker='o', markerfacecolor="green"  )
         
         ax1.text(rw.x_values[i]+0.5, rw.y_values[i]+0.05, str(i), fontsize=8, color='black')
         
