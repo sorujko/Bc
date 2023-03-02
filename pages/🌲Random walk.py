@@ -71,7 +71,12 @@ kroky=range(od,do+1)
 rw=Randomwalk(pocet_krokov=pocet_krokov, krok=kroky , strana_lesa=strana_lesa)
 rw.fill_walk()
 
+point_numbers=range(len(rw.x_values))
 
+x1, y1 = [-strana_lesa,strana_lesa], [strana_lesa,strana_lesa]
+x2,y2 = [-strana_lesa,strana_lesa], [-strana_lesa,-strana_lesa]
+x3,y3 = [-strana_lesa,-strana_lesa], [-strana_lesa,strana_lesa]
+x4,y4 = [strana_lesa,strana_lesa], [-strana_lesa,strana_lesa]
 
 
 
@@ -81,12 +86,6 @@ if rw.vysledok=='STRATILI STE SA V LESE!!':
 
     st.video(video_bytes , start_time=0 )
     
-point_numbers=range(len(rw.x_values))
-
-x1, y1 = [-strana_lesa,strana_lesa], [strana_lesa,strana_lesa]
-x2,y2 = [-strana_lesa,strana_lesa], [-strana_lesa,-strana_lesa]
-x3,y3 = [-strana_lesa,-strana_lesa], [-strana_lesa,strana_lesa]
-x4,y4 = [strana_lesa,strana_lesa], [-strana_lesa,strana_lesa]
     
 else:
     import time
