@@ -55,6 +55,13 @@ st.sidebar.write("""Táto stránka obsahuje 3 inputy - veľkosť strany lesa
                  animovaní graf , ktorý ukazuje postupnosť krokov.Ak nie ,
                  tak dostanete odpoveď , že ste sa stratili v lese a objaví sa video.""")
 
+od,do = krok
+kroky=range(od,do+1)
+
+rw=Randomwalk(pocet_krokov=pocet_krokov, krok=kroky , strana_lesa=strana_lesa)
+rw.fill_walk()
+
+
 if rw.vysledok=='STRATILI STE SA V LESE!!':
     video_file = open('videos/gif.mp4', 'rb')
     video_bytes = video_file.read()
@@ -110,11 +117,7 @@ with col3:
 
 
 
-od,do = krok
-kroky=range(od,do+1)
 
-rw=Randomwalk(pocet_krokov=pocet_krokov, krok=kroky , strana_lesa=strana_lesa)
-rw.fill_walk()
 
 plt.style.use('classic')
 
