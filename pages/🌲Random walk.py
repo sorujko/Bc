@@ -81,6 +81,13 @@ if rw.vysledok=='STRATILI STE SA V LESE!!':
 
     st.video(video_bytes , start_time=0 )
     
+point_numbers=range(len(rw.x_values))
+
+x1, y1 = [-strana_lesa,strana_lesa], [strana_lesa,strana_lesa]
+x2,y2 = [-strana_lesa,strana_lesa], [-strana_lesa,-strana_lesa]
+x3,y3 = [-strana_lesa,-strana_lesa], [-strana_lesa,strana_lesa]
+x4,y4 = [strana_lesa,strana_lesa], [-strana_lesa,strana_lesa]
+    
 else:
     import time
 
@@ -131,14 +138,10 @@ st.text(f'{rw.vysledok}')
 fig, (ax1,ax2) = plt.subplots(1,2 , sharey=True, sharex=True , figsize=(16,9), dpi=100)
 
 
-point_numbers=range(len(rw.x_values))
 
 
 ax1.plot(rw.x_values,rw.y_values , marker='o', markerfacecolor="green" )
-x1, y1 = [-strana_lesa,strana_lesa], [strana_lesa,strana_lesa]
-x2,y2 = [-strana_lesa,strana_lesa], [-strana_lesa,-strana_lesa]
-x3,y3 = [-strana_lesa,-strana_lesa], [-strana_lesa,strana_lesa]
-x4,y4 = [strana_lesa,strana_lesa], [-strana_lesa,strana_lesa]
+
 
 ax1.plot(x1, y1, marker = 'o')
 ax1.plot(x2, y2, marker = 'o')
