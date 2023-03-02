@@ -63,7 +63,7 @@ with col2:
    krok=st.slider('Velkost kroka od-do:' , min_value=1,max_value=10,step=1 , value=[1,5])
 
 with col3:
-   pocet_krokov=st.number_input('Pocet krokov:' , min_value=5,max_value=100,step=5 , value=30)
+   pocet_krokov=st.number_input('Pocet krokov:' , min_value=5,max_value=100,step=5 , value=20)
 
 od,do = krok
 kroky=range(od,do+1)
