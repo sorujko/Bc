@@ -78,7 +78,7 @@ x2,y2 = [-strana_lesa,strana_lesa], [-strana_lesa,-strana_lesa]
 x3,y3 = [-strana_lesa,-strana_lesa], [-strana_lesa,strana_lesa]
 x4,y4 = [strana_lesa,strana_lesa], [-strana_lesa,strana_lesa]
 
-
+st.text(f'{rw.vysledok}')
 
 if rw.vysledok=='STRATILI STE SA V LESE!!':
     video_file = open('videos/gif.mp4', 'rb')
@@ -131,7 +131,6 @@ else:
 
 plt.style.use('classic')
 
-st.text(f'{rw.vysledok}')
 
 
 fig, (ax1,ax2) = plt.subplots(1,2 , sharey=True, sharex=True , figsize=(16,9), dpi=100)
