@@ -55,7 +55,7 @@ st.sidebar.write("""Táto stránka obsahuje 3 inputy - veľkosť strany lesa
                  animovaní graf , ktorý ukazuje postupnosť krokov.Ak nie ,
                  tak dostanete odpoveď , že ste sa stratili v lese a objaví sa video.""")
 
-
+col1, col2, col3 = st.columns(3)
 with col1:
    strana_lesa=st.number_input('Strana lesa:' , min_value=20,max_value=100,step=5 , value=20)
 
@@ -71,7 +71,6 @@ kroky=range(od,do+1)
 rw=Randomwalk(pocet_krokov=pocet_krokov, krok=kroky , strana_lesa=strana_lesa)
 rw.fill_walk()
 
-col1, col2, col3 = st.columns(3)
 
 
 
