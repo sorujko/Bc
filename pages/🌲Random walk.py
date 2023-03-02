@@ -61,6 +61,17 @@ kroky=range(od,do+1)
 rw=Randomwalk(pocet_krokov=pocet_krokov, krok=kroky , strana_lesa=strana_lesa)
 rw.fill_walk()
 
+col1, col2, col3 = st.columns(3)
+
+with col1:
+   strana_lesa=st.number_input('Strana lesa:' , min_value=20,max_value=100,step=5 , value=20)
+
+with col2:
+   krok=st.slider('Velkost kroka od-do:' , min_value=1,max_value=10,step=1 , value=[1,5])
+
+with col3:
+   pocet_krokov=st.number_input('Pocet krokov:' , min_value=5,max_value=100,step=5 , value=30)
+
 
 if rw.vysledok=='STRATILI STE SA V LESE!!':
     video_file = open('videos/gif.mp4', 'rb')
@@ -103,16 +114,7 @@ else:
         animate(i)
         time.sleep(0.6)
 
-col1, col2, col3 = st.columns(3)
 
-with col1:
-   strana_lesa=st.number_input('Strana lesa:' , min_value=20,max_value=100,step=5 , value=20)
-
-with col2:
-   krok=st.slider('Velkost kroka od-do:' , min_value=1,max_value=10,step=1 , value=[1,5])
-
-with col3:
-   pocet_krokov=st.number_input('Pocet krokov:' , min_value=5,max_value=100,step=5 , value=30)
 
 
 
