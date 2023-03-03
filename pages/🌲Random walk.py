@@ -100,7 +100,7 @@ else:
     ax1.plot(x4, y4, marker = 'o')
     ax1.set(xlim=(-(strana_lesa+15), (strana_lesa+15)), ylim=(-(strana_lesa+15), (strana_lesa+15)))
 
-
+    time.sleep(0.6)
     #line, = ax1.plot(rw.x_values,rw.y_values , marker='o', markerfacecolor="green" )
     the_plot = st.pyplot(fig)
 
