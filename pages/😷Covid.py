@@ -341,7 +341,7 @@ with tab2:
     gdf = gpd.GeoDataFrame(gdf, geometry='geometry')
     gdf.crs = 'epsg:4326'
     # Plot the GeoDataFrame
-    ax = gdf.plot(color='red')
+    ax = gdf.plot(color='#3928F6')
     annotations = []
     for i,row in gdf.iterrows():
         if okresy.iloc[i,2]>0:
