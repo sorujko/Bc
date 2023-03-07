@@ -345,10 +345,15 @@ with tab2:
     annotations = []
     for i,row in gdf.iterrows():
         if okresy.iloc[i,2]>0:
-            annotation=plt.annotate(okresy.iloc[i,2], xy=row.geometry.centroid.coords[0], ha='center', fontsize=10)
+            if okresy.iloc[i,0] == 'Košice - okolie':
+                x_offset = -0.2
+                y_offset = -0.1
+            else:
+                x_offset = 0
+                y_offset = 0
+            annotation=plt.annotate(okresy.iloc[i,2], xy=(row.geometry.centroid.coords[0][0] + x_offset, 
+                                       row.geometry.centroid.coords[0][1] + y_offset), ha='center', fontsize=10)
             annotations.append(annotation)
-    # Show the plot
-    fig= ax.get_figure()
     
     
     
