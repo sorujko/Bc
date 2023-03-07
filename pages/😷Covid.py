@@ -356,7 +356,7 @@ with tab2:
             annotations.append(annotation)
     
     
-    
+    fig= ax.get_figure()
     st.pyplot(fig )
     st.image('images/okresy.png')
     
