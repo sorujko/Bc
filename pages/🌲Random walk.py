@@ -57,7 +57,7 @@ st.sidebar.write("""Táto stránka obsahuje 3 inputy - veľkosť strany lesa
 
 col1, col2, col3 = st.columns(3)
 with col1:
-   strana_lesa=st.number_input('Strana lesa:' , min_value=20,max_value=100,step=5 , value=20)
+   strana_lesa=st.number_input('Strana lesa:' , min_value=15,max_value=100,step=5 , value=25)
 
 with col2:
    krok=st.slider('Velkost kroka od-do:' , min_value=1,max_value=10,step=1 , value=[1,5])
