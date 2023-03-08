@@ -94,10 +94,10 @@ else:
 
 
 
-    ax1.plot(x1, y1, marker = 'o')
-    ax1.plot(x2, y2, marker = 'o')
-    ax1.plot(x3, y3, marker = 'o')
-    ax1.plot(x4, y4, marker = 'o')
+    ax1.plot(x1, y1, marker = 'o', markerfacecolor="green" )
+    ax1.plot(x2, y2, marker = 'o', markerfacecolor="green" )
+    ax1.plot(x3, y3, marker = 'o', markerfacecolor="green" )
+    ax1.plot(x4, y4, marker = 'o', markerfacecolor="green" )
     ax1.set(xlim=(-(strana_lesa+15), (strana_lesa+15)), ylim=(-(strana_lesa+15), (strana_lesa+15)))
 
     time.sleep(0.6)
