@@ -279,7 +279,6 @@ with tab1:
 with tab2:
     st.write("Ak sa kontent nezobrazi/nevidite na mape cisla/hodilo code error , dajte prosim Rerun(stlacenim R)")
     
-    import pandas as pd
     from selenium import webdriver
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
@@ -328,10 +327,7 @@ with tab2:
     # Close the webdriver
     driver.quit()
     import geopandas as gpd
-    import matplotlib.pyplot as plt
-    import pandas as pd
-    import numpy as np
- 
+
     # Load your GeoDataFrame
     okresy = pd.read_csv('data/covid_data2.csv')
     okresy.fillna(0, inplace=True)
