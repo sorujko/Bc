@@ -29,8 +29,8 @@ class Die:
         return randint(1,self.num_sides)
 
 
-pocet_kociek = st.number_input('Počet kociek:' , min_value=1,max_value=10,step=1 , value=2)
-pocet_hodov =st.number_input('Počet hodov:' , min_value=1,max_value=1000,step=20 , value = 100)
+pocet_kociek = st.number_input('Počet kociek:' , min_value=1,max_value=5,step=1 , value=2)
+pocet_hodov =st.number_input('Počet hodov:' , min_value=1,max_value=10000,step=100 , value = 300)
 
 
 
