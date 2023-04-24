@@ -1,1 +1,1 @@
-wget http://ftp.us.debian.org/debian/pool/main/c/chromium/chromium_89.0.4389.82-1~deb10u1_amd64.deb
+numpy
