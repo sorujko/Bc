@@ -1,3 +1,2 @@
-sudo apt-get update
 chromium
 chromium-driver
