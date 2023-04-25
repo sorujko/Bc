@@ -355,6 +355,7 @@ with tab2:
     fig= ax.get_figure()
     st.pyplot(fig )
     st.image('images/okresy.png')
+
     
 
 
