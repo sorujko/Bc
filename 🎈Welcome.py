@@ -11,7 +11,7 @@ st.sidebar.write("https://github.com/sorujko/Bc")
 st.sidebar.write()
 st.sidebar.write("### CRZP:")
 st.sidebar.write("##### Pozri bakalárku tu:")
-st.sidebar.write("Tu bude link na CRZP")
+st.sidebar.write("https://opac.crzp.sk/?fn=detailBiblioForm&sid=EC7951772ACC837B5E7AC5A56A1E")
 
 
 
