@@ -1,2 +1,2 @@
 Dátova analýza a vizualizácia v pythone
-https://sorujko-bc-welcome-smtwld.streamlit.app/
+https://bakalarkajhakos.streamlit.app/
